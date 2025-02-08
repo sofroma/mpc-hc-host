@@ -15,8 +15,8 @@ cl.exe main.c /link /SUBSYSTEM:CONSOLE /user32.lib
 Start the tool and it will print it's hwnd on console.
 Then start MPC-HC executables with arguments:
 ```
-/slave [your hwnd]
-Example: mpc-hc64.exe /slave 123456
+/new /slave [your hwnd]
+Example: mpc-hc64.exe /new /slave 123456
 where 123456 is a hwnd
 ```
 First connected instance will be main, other instances will sync to it.

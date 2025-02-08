@@ -46,7 +46,7 @@ typedef struct {
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-int wmain(int argc, char const *argv[])
+int wmain(int argc, wchar_t *argv[])
 {
 	HINSTANCE hInstance = GetModuleHandle(NULL);
 	const wchar_t CLASS_NAME[] = L"MPC-HC Host Class";
@@ -82,8 +82,8 @@ int wmain(int argc, char const *argv[])
 		return 1;
 	}
 	SetWindowLongPtrW(hwnd, GWLP_USERDATA, (LONG_PTR)&host);
-	printf("Start up to 4 MPC-HC instances from cmd with arguments: /slave %d\n", hwnd);
-	printf("For example: mpc-hc64.exe /slave %d\n", hwnd);
+	printf("Start up to 4 MPC-HC instances from cmd with arguments: /new /slave %d\n", hwnd);
+	printf("For example: mpc-hc64.exe /new /slave %d\n", hwnd);
 	printf("First connected instance will be main, other instances will sync to it.\n");
 	
 	MSG msg;
