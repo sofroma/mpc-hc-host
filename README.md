@@ -7,7 +7,7 @@ It's may be useful when you want to use multiple audio devices with custom audio
 
 Execute Native Tools command prompt for Visual Studio and call:
 ```
-cl.exe main.c /link /SUBSYSTEM:CONSOLE /user32.lib
+cl.exe main.c /link /SUBSYSTEM:CONSOLE user32.lib
 ```
 
 ### Usage
